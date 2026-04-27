@@ -1,74 +1,38 @@
-# A* Truck Logistics Route Optimization
+# Truck Logistics Route Optimization using A* Search
 
-## Task 1: Read the attached A* Search Python code
-The provided A* Search Python code was reviewed. The code was incomplete and contained several errors, including an incomplete graph, missing heuristic values, incorrect variable names, and syntax mistakes that prevented execution.
+## Description
+This project implements the A* Search algorithm to determine the most efficient route for a truck traveling between locations in the Mahikeng Local Municipality.
 
----
+The algorithm uses both actual distances and heuristic values (traffic estimates) to find the shortest and most optimal path.
 
-## Task 2: Identify and correct the bugs in the program
-The following issues were identified and fixed:
+## Problem Statement
+The goal is to find the best route from **Disaneng** to **Coligny** while minimizing travel cost.
 
-- The graph was incomplete (only "Disaneng" was defined) → completed all nodes
-- The heuristic dictionary was empty → added heuristic values for all locations
-- The goal node was incorrect:
-  - Changed from `" "` to `"Coligny"`
-- Function name typo:
-  - `simulte_path(pat)` → corrected to `simulate_path(path)`
-- Undefined variables corrected:
-  - `visit_order` → `visited_order`
-  - `pat` → `path`
-  - `tot_cost` → `total_cost`
+## Solution Approach
+- A graph was created to represent connections between locations
+- Distances between locations were defined as weights
+- Heuristic values were added based on traffic data
+- The A* algorithm was used to compute the optimal route
 
----
+## Fixes Made
+- Completed the graph with all missing nodes and connections
+- Added heuristic values for all locations
+- Fixed variable naming errors in the given code
+- Corrected the goal node to "Coligny"
+- Ensured the program runs without errors
 
-## Task 3: Fill in the missing parts of the code
-The missing components were completed as follows:
-
-- Added full graph structure connecting all towns
-- Added heuristic values for each node
-- Corrected start and goal nodes
-- Fixed the simulation function
-
----
-
-## Task 4: Execute the corrected program
-
-### Output:
+## Output
 Visited Order:
-Disaneng → Mahikeng → Mmabatho → Slurry → Bakerville → Lichtenburg → Coligny
+[Disaneng, Mahikeng, Mmabatho, Slurry, Bakerville, Lichtenburg, Coligny]
 
 Optimal Path:
-Disaneng → Mahikeng → Bakerville → Lichtenburg → Coligny
+[Disaneng, Mahikeng, Bakerville, Lichtenburg, Coligny]
 
 Total Cost:
 110
 
----
-
-## Task 5: Determine the optimal route
-
-The optimal route from the start node to the destination is:
-
-Disaneng → Mahikeng → Bakerville → Lichtenburg → Coligny
-
----
-
-## Task 6: Answer the MCQs
-
-- A* evaluation function:  
-  f(n) = g(n) + h(n)
-
-- Start node: Disaneng  
-- Goal node: Coligny  
-- Optimal path cost: 110  
-- Algorithm used: A* Search Algorithm  
-
----
-
-## Task 7: Submission
-
-The following files are included in this repository:
-
-- `astar_truck_route.py` → Corrected A* algorithm code  
-- `README.md` → Answers and explanation  
-- `output.png` (optional) → Screenshot of program execution  
+## How to Run
+1. Open terminal or command prompt
+2. Navigate to the project folder
+3. Run the following command:
+ 
